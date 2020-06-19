@@ -1,1 +1,3 @@
-# mern-image-classification
+# Image Classification using TensorFlow JS
+
+# Authentication flow with MongoDB
