@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item p {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 23px;
+  text-decoration: none;
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1.5px;
+}

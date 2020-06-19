@@ -1,0 +1,13 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  margin-top: 20px;
+}
+
+.table-container {
+  margin-left: 30px;
+  margin-top: 20px;
+}

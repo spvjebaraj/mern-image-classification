@@ -1,0 +1,78 @@
+.auth-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.main-padding {
+  padding: 2rem;
+}
+
+.container-legend {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.field-mt {
+  margin-top: 1rem;
+}
+
+.field-lbl {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  display: block;
+}
+
+.field-input {
+  padding: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  background-color: transparent !important;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.field-input:hover {
+  background-color: #000 !important;
+  color: #fff;
+}
+
+.field-mb {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.auth-button {
+  font-size: 0.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  border-color: #000;
+  border-style: solid;
+  border-width: 1px;
+  background: transparent;
+}
