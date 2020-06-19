@@ -24,6 +24,5 @@
     "mongoose": "^5.9.19",
     "nodemon": "^2.0.4",
     "validator": "^13.1.1"
-  },
-  "proxy": "http://localhost:5000"
+  }
 }
