@@ -34,7 +34,7 @@ router.post("/image", auth, (req, res) => {
 
             const imageData = new Classification({
               image_url: files.image.path,
-              classification: data,
+              classifications: data,
               user_id: req.user._id,
             });
             imageData.save().then(() => {
@@ -68,7 +68,7 @@ router.post("/imageurl", auth, async (req, res) => {
 
       const imageData = new Classification({
         image_url: req.body.url,
-        classification: data,
+        classifications: data,
         user_id: req.user._id,
       });
       imageData.save().then(() => {

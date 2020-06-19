@@ -6,15 +6,15 @@ const classificationSchema = new mongoose.Schema(
     image_url: {
       type: String,
     },
-    classification: [
+    classifications: [
       {
+        class_name: {
+          type: String,
+        },
         probability: {
           type: Decimal128,
         },
         probability_percent: {
-          type: String,
-        },
-        class_name: {
           type: String,
         },
       },
