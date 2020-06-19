@@ -3,15 +3,22 @@ const { Decimal128 } = require("mongodb");
 
 const classificationSchema = new mongoose.Schema(
   {
-    probability: {
-      type: Decimal128,
-    },
-    probability_percent: {
+    image_url: {
       type: String,
     },
-    class_name: {
-      type: String,
-    },
+    classification: [
+      {
+        probability: {
+          type: Decimal128,
+        },
+        probability_percent: {
+          type: String,
+        },
+        class_name: {
+          type: String,
+        },
+      },
+    ],
     user_id: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,

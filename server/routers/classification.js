@@ -22,8 +22,25 @@ router.post("/image", auth, (req, res) => {
       } else {
         getClassification(files.image.path)
           .then((imageClassification) => {
-            res.status(200).send({
-              classification: imageClassification,
+            const data = [];
+
+            imageClassification.forEach((item) => {
+              data.push({
+                class_name: item.className,
+                probability: item.probability,
+                probability_percent: item.probability * 100 + "%",
+              });
+            });
+
+            const imageData = new Classification({
+              image_url: files.image.path,
+              classification: data,
+              user_id: req.user._id,
+            });
+            imageData.save().then(() => {
+              res.status(200).send({
+                classification: imageClassification,
+              });
             });
           })
           .catch((err) => {
@@ -49,14 +66,16 @@ router.post("/imageurl", auth, async (req, res) => {
         });
       });
 
-      const imageData = new Classification();
-      imageData.collection
-        .insertMany(data, { user_id: req.user._id })
-        .then(() => {
-          res.status(200).send({
-            classification: imageClassification,
-          });
+      const imageData = new Classification({
+        image_url: req.body.url,
+        classification: data,
+        user_id: req.user._id,
+      });
+      imageData.save().then(() => {
+        res.status(200).send({
+          classification: imageClassification,
         });
+      });
     })
     .catch((err) => {
       console.log(err);
